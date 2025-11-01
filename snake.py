@@ -137,8 +137,7 @@ class SnakeGame:
         for i, cell in enumerate(self.snake):
             color = "#00FF00" if i == 0 else "#66FF66"
             self.draw_cell(cell, fill=color, outline="#003300")
-        # optional grid lines (comment out if undesired)
-        # self.draw_grid()
+            
 
     def draw_cell(self, pos, fill="white", outline=""):
         x, y = pos
@@ -171,4 +170,5 @@ class SnakeGame:
 if __name__ == "__main__":
     root = tk.Tk()
     game = SnakeGame(root)
+
     root.mainloop()
