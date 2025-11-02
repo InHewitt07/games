@@ -1,11 +1,6 @@
 import tkinter as tk
 import random
 
-#!/usr/bin/env python3
-"""
-Simple Snake game using tkinter (no pygame).
-Save as snake.py and run: python snake.py
-"""
 
 CELL_SIZE = 20
 GRID_WIDTH = 30
@@ -137,8 +132,8 @@ class SnakeGame:
         for i, cell in enumerate(self.snake):
             color = "#00FF00" if i == 0 else "#66FF66"
             self.draw_cell(cell, fill=color, outline="#003300")
-            
 
+    
     def draw_cell(self, pos, fill="white", outline=""):
         x, y = pos
         x1 = x * CELL_SIZE
@@ -166,9 +161,10 @@ class SnakeGame:
             justify=tk.CENTER,
         )
 
-        
+
 if __name__ == "__main__":
     root = tk.Tk()
     game = SnakeGame(root)
 
     root.mainloop()
+
